@@ -11,6 +11,11 @@ interface Cat {
 const app = new Hono();
 const cats: Record<string, Cat> = {};
 
+// Health check endpoint
+app.get('/health', (c) => {
+  return c.json({ status: 'ok', uptime: process.uptime() });
+});
+
 // Get all cats
 app.get('/cats', (c) => {
   return c.json(Object.values(cats));
