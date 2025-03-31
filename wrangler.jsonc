@@ -1,6 +1,6 @@
 {
-  "name": "hello-world-app",
-  "main": "src/index.mjs",
+  "name": "cats-crud-api",
+  "main": "src/index.ts",
   "compatibility_date": "2025-03-07",
   "compatibility_flags": ["nodejs_compat"],
   "observability": {
