@@ -1,13 +1,13 @@
 {
   "name": "wai-1",
   "version": "1.0.0",
-  "description": "Hello World Cloudflare Worker",
+  "description": "Jokes API using Hono and TypeScript",
   "main": "src/index.ts",
   "scripts": {
     "start": "wrangler dev",
-    "deploy": "wrangler deploy --dispatch-namespace testing"
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "wrangler": "^4.0.0"
+    "hono": "^3.2.7"
   }
 }
