@@ -2,22 +2,28 @@ import { Hono } from 'hono';
 
 const app = new Hono();
 
-// Endpoint to get a random joke
-app.get('/joke', (c) => {
-  const jokes = [
-    "Why don't scientists trust atoms? Because they make up everything!",
-    "Why did the scarecrow win an award? Because he was outstanding in his field!",
-    "Why don't skeletons fight each other? They don't have the guts."
-  ];
+// Endpoint to fetch data from example.com/api
+app.get('/fetch-example', async (c) => {
+  try {
+    const response = await fetch('https://example.com/api');
+    const data = await response.json();
 
-  const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
-
-  return c.json({ joke: randomJoke });
+    return c.json({
+      message: 'Data fetched successfully!',
+      data,
+    });
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return c.json({
+      message: 'Failed to fetch data.',
+      error: error instanceof Error ? error.message : 'Unknown error',
+    }, 500);
+  }
 });
 
 // Default route
 app.get('/', (c) => {
-  return c.text('Welcome to the Jokes API! Use the /joke endpoint to get a random joke.');
+  return c.text('Welcome! Use the /fetch-example endpoint to fetch data from example.com/api.');
 });
 
 export default app;
