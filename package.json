@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "wrangler dev",
-    "deploy": "wrangler publish"
+    "deploy": "wrangler deploy --dispatch-namespace testing"
   },
   "dependencies": {
     "wrangler": "^4.0.0"
