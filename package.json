@@ -1,20 +1,13 @@
 {
-  "name": "cats-crud-api",
+  "name": "wai-1",
   "version": "1.0.0",
-  "description": "A simple CRUD API for managing cats using Cloudflare Workers",
+  "description": "Hello World Cloudflare Worker",
   "main": "src/index.ts",
   "scripts": {
     "start": "wrangler dev",
     "deploy": "wrangler publish"
   },
   "dependencies": {
-    "hono": "^3.2.7",
-    "nanoid": "^4.0.0",
-    "wrangler": "^3.0.0"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20230904.0"
-  },
-  "author": "",
-  "license": "ISC"
+    "wrangler": "^4.0.0"
+  }
 }
