@@ -1,9 +1,15 @@
 {
-  "name": "wai-1",
+  "name": "ai-image-prodigi",
   "main": "src/index.ts",
   "compatibility_date": "2025-03-07",
   "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "OPENAI_API_KEY": "<YOUR_OPENAI_API_KEY>",
+    "PRODIGI_API_KEY": "<YOUR_PRODIGI_API_KEY>",
+    "STRIPE_API_KEY": "<YOUR_STRIPE_API_KEY>"
+  },
   "observability": {
-    "enabled": true
+    "enabled": true,
+    "head_sampling_rate": 1
   }
 }
