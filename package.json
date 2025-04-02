@@ -1,14 +1,8 @@
 {
-  "name": "wai-1",
+  "name": "ai-image-prodigi",
   "version": "1.0.0",
-  "description": "Jokes API using Hono and TypeScript",
   "main": "src/index.ts",
-  "scripts": {
-    "start": "wrangler dev",
-    "deploy": "wrangler deploy --dispatch-namespace testing"
-  },
   "dependencies": {
-    "hono": "^4.0.0",
-    "wrangler": "^4.0.0"
+    "openai": "^4.0.0"
   }
 }
